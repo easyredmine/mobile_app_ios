@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="AvatarUrls" representedClassName="AvatarUrls" syncable="YES">
+        <attribute name="large" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="medium" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="original" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="small" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="assignedTo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MembershipItem" inverseName="avatarUrls" inverseEntity="MembershipItem" syncable="YES"/>
+        <userInfo>
+            <entry key="identityAttribute" value="original"/>
+        </userInfo>
+    </entity>
+    <entity name="CFAddress" representedClassName="CFAddress" parentEntity="CFString" syncable="YES">
+        <userInfo>
+            <entry key="typeValue" value="easy_google_map_address"/>
+        </userInfo>
+    </entity>
+    <entity name="CFBool" representedClassName="CFBool" parentEntity="CustomField" syncable="YES">
+        <attribute name="value" optional="YES" attributeType="Boolean" syncable="YES">
+            <userInfo>
+                <entry key="JSONTransformerName" value="StringToNumberTransformer"/>
+            </userInfo>
+        </attribute>
+        <userInfo>
+            <entry key="typeValue" value="bool"/>
+        </userInfo>
+    </entity>
+    <entity name="CFDate" representedClassName="CFDate" parentEntity="CustomField" syncable="YES">
+        <attribute name="value" optional="YES" attributeType="Date" syncable="YES">
+            <userInfo>
+                <entry key="JSONTransformerName" value="RMDateTransformer"/>
+            </userInfo>
+        </attribute>
+        <userInfo>
+            <entry key="typeValue" value="&quot;date&quot;,&quot;datetime&quot;"/>
+        </userInfo>
+    </entity>
+    <entity name="CFEmail" representedClassName="CFEmail" parentEntity="CFString" syncable="YES">
+        <userInfo>
+            <entry key="typeValue" value="email"/>
+        </userInfo>
+    </entity>
+    <entity name="CFFloat" representedClassName="CFFloat" parentEntity="CustomField" syncable="YES">
+        <attribute name="value" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES">
+            <userInfo>
+                <entry key="JSONTransformerName" value="StringToNumberTransformer"/>
+            </userInfo>
+        </attribute>
+        <userInfo>
+            <entry key="typeValue" value="float"/>
+        </userInfo>
+    </entity>
+    <entity name="CFHTML" representedClassName="CFHTML" parentEntity="CFString" syncable="YES">
+        <userInfo>
+            <entry key="typeValue" value="text"/>
+        </userInfo>
+    </entity>
+    <entity name="CFImmutableString" representedClassName="CFImmutableString" parentEntity="CFString" syncable="YES">
+        <userInfo>
+            <entry key="typeValue" value="&quot;autoincrement&quot;,&quot;easy_computed_token&quot;,&quot;easy_rating&quot;"/>
+        </userInfo>
+    </entity>
+    <entity name="CFInt" representedClassName="CFInt" parentEntity="CustomField" syncable="YES">
+        <attribute name="value" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES">
+            <userInfo>
+                <entry key="JSONTransformerName" value="StringToNumberTransformer"/>
+            </userInfo>
+        </attribute>
+        <userInfo>
+            <entry key="typeValue" value="&quot;amount&quot;,&quot;int&quot;"/>
+        </userInfo>
+    </entity>
+    <entity name="CFLink" representedClassName="CFLink" parentEntity="CFString" syncable="YES">
+        <userInfo>
+            <entry key="typeValue" value="link"/>
+        </userInfo>
+    </entity>
+    <entity name="CFList" representedClassName="CFList" parentEntity="CustomField" syncable="YES">
+        <attribute name="multiple" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="Transformable" valueTransformerName="ArrayTransformer" syncable="YES">
+            <userInfo>
+                <entry key="JSONTransformerName" value="WrapInArrayTransformer"/>
+            </userInfo>
+        </attribute>
+        <userInfo>
+            <entry key="evaluateSubentities" value="yes"/>
+            <entry key="typeValue" value="&quot;list&quot;,&quot;value_tree&quot;"/>
+        </userInfo>
+    </entity>
+    <entity name="CFMilestone" representedClassName="CFMilestone" parentEntity="CFList" syncable="YES">
+        <userInfo>
+            <entry key="typeValue" value="version"/>
+        </userInfo>
+    </entity>
+    <entity name="CFPercent" representedClassName="CFPercent" parentEntity="CFInt" syncable="YES">
+        <userInfo>
+            <entry key="typeValue" value="easy_percent"/>
+        </userInfo>
+    </entity>
+    <entity name="CFString" representedClassName="CFString" parentEntity="CustomField" syncable="YES">
+        <attribute name="value" optional="YES" attributeType="String" syncable="YES"/>
+        <userInfo>
+            <entry key="evaluateSubentities" value="yes"/>
+            <entry key="typeValue" value="string"/>
+        </userInfo>
+    </entity>
+    <entity name="CFUser" representedClassName="CFUser" parentEntity="CFList" syncable="YES">
+        <userInfo>
+            <entry key="typeValue" value="user"/>
+        </userInfo>
+    </entity>
+    <entity name="CustomField" representedClassName="CustomField" isAbstract="YES" syncable="YES">
+        <attribute name="fieldFormat" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="Integer 32" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="internalName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="issues" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Issue" inverseName="customFields" inverseEntity="Issue" syncable="YES"/>
+        <userInfo>
+            <entry key="identityAttribute" value="null"/>
+            <entry key="typeKeyPath" value="field_format"/>
+        </userInfo>
+    </entity>
+    <entity name="File" representedClassName="File" syncable="YES">
+        <attribute name="contentUrl" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="content_url"/>
+            </userInfo>
+        </attribute>
+        <attribute name="createdOn" optional="YES" attributeType="Date" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="created_on"/>
+                <entry key="JSONTransformerName" value="ReverseAtomDateTransformer"/>
+            </userInfo>
+        </attribute>
+        <attribute name="descriptionFile" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fileName" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="filename"/>
+            </userInfo>
+        </attribute>
+        <attribute name="fileSize" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="filesize"/>
+            </userInfo>
+        </attribute>
+        <attribute name="identifier" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="issue" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Issue" inverseName="attachments" inverseEntity="Issue" syncable="YES"/>
+    </entity>
+    <entity name="Issue" representedClassName="Issue" syncable="YES">
+        <attribute name="createdOn" optional="YES" attributeType="Date" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="create_on"/>
+                <entry key="JSONTransformerName" value="ReverseAtomDateTransformer"/>
+            </userInfo>
+        </attribute>
+        <attribute name="doneRatio" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="dueDate" optional="YES" attributeType="Date" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="due_date"/>
+                <entry key="JSONTransformerName" value="RMDateTransformer"/>
+            </userInfo>
+        </attribute>
+        <attribute name="estimatedHours" optional="YES" attributeType="Double" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="Integer 32" syncable="YES"/>
+        <attribute name="isFavorited" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="is_favorited"/>
+                <entry key="resetOnMerge" value="true"/>
+            </userInfo>
+        </attribute>
+        <attribute name="issueDescription" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="description"/>
+            </userInfo>
+        </attribute>
+        <attribute name="spentHours" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" syncable="YES">
+            <userInfo>
+                <entry key="JSONTransformerName" value="RMDateTransformer"/>
+            </userInfo>
+        </attribute>
+        <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updatedOn" optional="YES" attributeType="Date" syncable="YES">
+            <userInfo>
+                <entry key="JSONTransformerName" value="ReverseAtomDateTransformer"/>
+            </userInfo>
+        </attribute>
+        <relationship name="assignedTo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MembershipItem" inverseName="assignedIssues" inverseEntity="MembershipItem" syncable="YES"/>
+        <relationship name="attachments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="File" inverseName="issue" inverseEntity="File" syncable="YES"/>
+        <relationship name="author" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MembershipItem" inverseName="authoredIssues" inverseEntity="MembershipItem" syncable="YES"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="IssueCategory" inverseName="issues" inverseEntity="IssueCategory" syncable="YES"/>
+        <relationship name="children" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Issue" inverseName="parent" inverseEntity="Issue" syncable="YES"/>
+        <relationship name="customFields" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CustomField" inverseName="issues" inverseEntity="CustomField" syncable="YES"/>
+        <relationship name="fixedVersion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Version" inverseName="issues" inverseEntity="Version" syncable="YES"/>
+        <relationship name="haveRelations" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Relation" inverseName="issue" inverseEntity="Relation" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="relations"/>
+            </userInfo>
+        </relationship>
+        <relationship name="isInRelations" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Relation" inverseName="issueTo" inverseEntity="Relation" syncable="YES"/>
+        <relationship name="journals" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Journal" inverseName="issue" inverseEntity="Journal" syncable="YES"/>
+        <relationship name="parent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Issue" inverseName="children" inverseEntity="Issue" syncable="YES"/>
+        <relationship name="priority" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Priority" inverseName="issues" inverseEntity="Priority" syncable="YES"/>
+        <relationship name="project" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Project" inverseName="issues" inverseEntity="Project" syncable="YES"/>
+        <relationship name="status" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Status" inverseName="issues" inverseEntity="Status" syncable="YES"/>
+        <relationship name="tracker" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Tracker" inverseName="issues" inverseEntity="Tracker" syncable="YES"/>
+    </entity>
+    <entity name="IssueCategory" representedClassName="IssueCategory" syncable="YES">
+        <attribute name="identifier" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="issues" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Issue" inverseName="category" inverseEntity="Issue" syncable="YES"/>
+        <relationship name="project" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Project" inverseName="issueCategories" inverseEntity="Project" syncable="YES"/>
+    </entity>
+    <entity name="Journal" representedClassName="Journal" syncable="YES">
+        <attribute name="createdOn" optional="YES" attributeType="Date" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="created_on"/>
+                <entry key="JSONTransformerName" value="ReverseAtomDateTransformer"/>
+            </userInfo>
+        </attribute>
+        <attribute name="identifier" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="id"/>
+            </userInfo>
+        </attribute>
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="issue" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Issue" inverseName="journals" inverseEntity="Issue" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MembershipItem" inverseName="authorJournals" inverseEntity="MembershipItem" syncable="YES"/>
+    </entity>
+    <entity name="MembershipItem" representedClassName="MembershipItem" syncable="YES">
+        <attribute name="identifier" optional="YES" attributeType="Integer 32" defaultValueString="0.0" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="id"/>
+            </userInfo>
+        </attribute>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="assignedIssues" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Issue" inverseName="assignedTo" inverseEntity="Issue" syncable="YES"/>
+        <relationship name="authoredIssues" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Issue" inverseName="author" inverseEntity="Issue" syncable="YES"/>
+        <relationship name="authorJournals" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Journal" inverseName="user" inverseEntity="Journal" syncable="YES"/>
+        <relationship name="avatarUrls" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AvatarUrls" inverseName="assignedTo" inverseEntity="AvatarUrls" syncable="YES"/>
+        <relationship name="projects" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Project" inverseName="author" inverseEntity="Project" syncable="YES"/>
+    </entity>
+    <entity name="Priority" representedClassName="Priority" syncable="YES">
+        <attribute name="identifier" optional="YES" attributeType="Integer 32" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="issues" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Issue" inverseName="priority" inverseEntity="Issue" syncable="YES"/>
+    </entity>
+    <entity name="Project" representedClassName="Project" syncable="YES">
+        <attribute name="createdOn" optional="YES" attributeType="Date" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="created_on"/>
+                <entry key="JSONTransformerName" value="ReverseAtomDateTransformer"/>
+            </userInfo>
+        </attribute>
+        <attribute name="easyDueDate" optional="YES" attributeType="Date" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="easy_due_date"/>
+                <entry key="JSONTransformerName" value="ReverseAtomDateTransformer"/>
+            </userInfo>
+        </attribute>
+        <attribute name="homepage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="id"/>
+            </userInfo>
+        </attribute>
+        <attribute name="isPublic" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="partialName" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="name"/>
+            </userInfo>
+        </attribute>
+        <attribute name="projectDescription" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="description"/>
+            </userInfo>
+        </attribute>
+        <attribute name="projectIdentifier" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="identifier"/>
+            </userInfo>
+        </attribute>
+        <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="sumEstimatedHours" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="sum_estimated_hours"/>
+            </userInfo>
+        </attribute>
+        <attribute name="sumTimeEntries" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="sum_time_entries"/>
+            </userInfo>
+        </attribute>
+        <attribute name="updatedOn" optional="YES" attributeType="Date" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="updated_on"/>
+                <entry key="JSONTransformerName" value="ReverseAtomDateTransformer"/>
+            </userInfo>
+        </attribute>
+        <relationship name="author" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MembershipItem" inverseName="projects" inverseEntity="MembershipItem" syncable="YES"/>
+        <relationship name="childProjects" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Project" inverseName="parentProject" inverseEntity="Project" syncable="YES"/>
+        <relationship name="issueCategories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="IssueCategory" inverseName="project" inverseEntity="IssueCategory" syncable="YES"/>
+        <relationship name="issueDrafts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Issue" syncable="YES"/>
+        <relationship name="issues" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Issue" inverseName="project" inverseEntity="Issue" syncable="YES"/>
+        <relationship name="parentProject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Project" inverseName="childProjects" inverseEntity="Project" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="parent"/>
+            </userInfo>
+        </relationship>
+        <relationship name="trackers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tracker" inverseName="projects" inverseEntity="Tracker" syncable="YES"/>
+        <userInfo>
+            <entry key="identityAttribute" value="identifier"/>
+        </userInfo>
+    </entity>
+    <entity name="Query" representedClassName="Query" syncable="YES">
+        <attribute name="identifier" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="id"/>
+            </userInfo>
+        </attribute>
+        <attribute name="isEnable" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="isPublic" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="is_public"/>
+            </userInfo>
+        </attribute>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <userInfo>
+            <entry key="identityAttribute" value="identifier"/>
+        </userInfo>
+    </entity>
+    <entity name="Relation" representedClassName="Relation" syncable="YES">
+        <attribute name="identifier" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="relationType" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="relation_type"/>
+            </userInfo>
+        </attribute>
+        <relationship name="issue" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Issue" inverseName="haveRelations" inverseEntity="Issue" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="null"/>
+            </userInfo>
+        </relationship>
+        <relationship name="issueTo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Issue" inverseName="isInRelations" inverseEntity="Issue" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="issue_to_id"/>
+            </userInfo>
+        </relationship>
+    </entity>
+    <entity name="Status" representedClassName="Status" syncable="YES">
+        <attribute name="identifier" optional="YES" attributeType="Integer 32" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="issues" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Issue" inverseName="status" inverseEntity="Issue" syncable="YES"/>
+    </entity>
+    <entity name="TimeEntryActivity" representedClassName="TimeEntryActivity" syncable="YES">
+        <attribute name="identifier" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="isDefault" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="is_default"/>
+            </userInfo>
+        </attribute>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Tracker" representedClassName="Tracker" syncable="YES">
+        <attribute name="identifier" optional="YES" attributeType="Integer 32" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="issues" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Issue" inverseName="tracker" inverseEntity="Issue" syncable="YES"/>
+        <relationship name="projects" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Project" inverseName="trackers" inverseEntity="Project" syncable="YES"/>
+    </entity>
+    <entity name="UserCredentials" representedClassName="UserCredentials" syncable="YES">
+        <attribute name="baseUrlString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Version" representedClassName="Version" syncable="YES">
+        <attribute name="identifier" optional="YES" attributeType="Integer 32" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="issues" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Issue" inverseName="fixedVersion" inverseEntity="Issue" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AvatarUrls" positionX="0" positionY="0" width="128" height="120"/>
+        <element name="CFAddress" positionX="-378" positionY="153" width="128" height="45"/>
+        <element name="CFBool" positionX="-360" positionY="171" width="128" height="60"/>
+        <element name="CFDate" positionX="-378" positionY="153" width="128" height="60"/>
+        <element name="CFEmail" positionX="-342" positionY="189" width="128" height="45"/>
+        <element name="CFFloat" positionX="-333" positionY="198" width="128" height="60"/>
+        <element name="CFHTML" positionX="-378" positionY="153" width="128" height="45"/>
+        <element name="CFImmutableString" positionX="-369" positionY="162" width="128" height="45"/>
+        <element name="CFInt" positionX="-369" positionY="162" width="128" height="60"/>
+        <element name="CFLink" positionX="-324" positionY="207" width="128" height="45"/>
+        <element name="CFList" positionX="-360" positionY="171" width="128" height="75"/>
+        <element name="CFMilestone" positionX="-369" positionY="162" width="128" height="45"/>
+        <element name="CFPercent" positionX="-378" positionY="162" width="128" height="45"/>
+        <element name="CFString" positionX="-351" positionY="180" width="128" height="60"/>
+        <element name="CFUser" positionX="-378" positionY="153" width="128" height="45"/>
+        <element name="CustomField" positionX="0" positionY="0" width="128" height="120"/>
+        <element name="File" positionX="0" positionY="0" width="128" height="150"/>
+        <element name="Issue" positionX="0" positionY="0" width="128" height="435"/>
+        <element name="IssueCategory" positionX="-378" positionY="153" width="128" height="105"/>
+        <element name="Journal" positionX="0" positionY="0" width="128" height="120"/>
+        <element name="MembershipItem" positionX="0" positionY="0" width="128" height="150"/>
+        <element name="Priority" positionX="0" positionY="0" width="128" height="90"/>
+        <element name="Project" positionX="0" positionY="0" width="128" height="330"/>
+        <element name="Query" positionX="0" positionY="0" width="128" height="120"/>
+        <element name="Relation" positionX="0" positionY="0" width="128" height="105"/>
+        <element name="Status" positionX="0" positionY="0" width="128" height="90"/>
+        <element name="TimeEntryActivity" positionX="0" positionY="0" width="128" height="90"/>
+        <element name="Tracker" positionX="-486" positionY="162" width="128" height="105"/>
+        <element name="UserCredentials" positionX="-218" positionY="0" width="128" height="90"/>
+        <element name="Version" positionX="-585" positionY="0" width="128" height="90"/>
+    </elements>
+</model>

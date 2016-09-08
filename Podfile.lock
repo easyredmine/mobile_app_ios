@@ -1,0 +1,127 @@
+PODS:
+  - ACKategories (2.3)
+  - AFNetworking (2.5.4):
+    - AFNetworking/NSURLConnection (= 2.5.4)
+    - AFNetworking/NSURLSession (= 2.5.4)
+    - AFNetworking/Reachability (= 2.5.4)
+    - AFNetworking/Security (= 2.5.4)
+    - AFNetworking/Serialization (= 2.5.4)
+    - AFNetworking/UIKit (= 2.5.4)
+  - AFNetworking/NSURLConnection (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.5.4)
+  - AFNetworking/Security (2.5.4)
+  - AFNetworking/Serialization (2.5.4)
+  - AFNetworking/UIKit (2.5.4):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - DZNEmptyDataSet (1.7.2)
+  - ECSlidingViewController (2.0.3)
+  - FlurrySDK (6.7.0):
+    - FlurrySDK/FlurrySDK (= 6.7.0)
+  - FlurrySDK/FlurrySDK (6.7.0)
+  - HockeySDK (3.8.5):
+    - HockeySDK/AllFeaturesLib (= 3.8.5)
+  - HockeySDK/AllFeaturesLib (3.8.5)
+  - IQKeyboardManager (3.3.4)
+  - Kiwi (2.4.0)
+  - MagicalRecord (2.2):
+    - MagicalRecord/Core (= 2.2)
+  - MagicalRecord/Core (2.2)
+  - Mantle (2.0.6):
+    - Mantle/extobjc (= 2.0.6)
+  - Mantle/extobjc (2.0.6)
+  - Masonry (0.6.4)
+  - PHFComposeBarView (2.0.2):
+    - PHFDelegateChain (~> 1.0)
+  - PHFDelegateChain (1.0.1)
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
+  - StandardPaths (1.6.4)
+  - SVProgressHUD (1.1.3)
+  - SZTextView (1.2.1)
+  - TransformerKit (0.5.4):
+    - TransformerKit/Core (= 0.5.4)
+    - TransformerKit/Cryptography (= 0.5.4)
+    - TransformerKit/Data (= 0.5.4)
+    - TransformerKit/Date (= 0.5.4)
+    - TransformerKit/Image (= 0.5.4)
+    - TransformerKit/JSON (= 0.5.4)
+    - TransformerKit/String (= 0.5.4)
+  - TransformerKit/Core (0.5.4)
+  - TransformerKit/Cryptography (0.5.4):
+    - TransformerKit/Core
+  - TransformerKit/Data (0.5.4):
+    - TransformerKit/Core
+  - TransformerKit/Date (0.5.4):
+    - TransformerKit/Core
+  - TransformerKit/Image (0.5.4):
+    - TransformerKit/Core
+  - TransformerKit/JSON (0.5.4):
+    - TransformerKit/Core
+  - TransformerKit/String (0.5.4):
+    - TransformerKit/Core
+  - UIAlertView+Blocks (0.9)
+
+DEPENDENCIES:
+  - ACKategories (from `https://github.com/AckeeCZ/ACKategories.git`)
+  - AFNetworking (~> 2.5.4)
+  - DZNEmptyDataSet (= 1.7.2)
+  - ECSlidingViewController (~> 2.0.3)
+  - FlurrySDK (~> 6.7.0)
+  - HockeySDK (~> 3.8.5)
+  - IQKeyboardManager (= 3.3.4)
+  - Kiwi
+  - MagicalRecord (= 2.2)
+  - Mantle (~> 2.0.5)
+  - Masonry (~> 0.6.3)
+  - PHFComposeBarView (~> 2.0.2)
+  - ReactiveCocoa (~> 2.5)
+  - StandardPaths (~> 1.6.4)
+  - SVProgressHUD (~> 1.1.3)
+  - SZTextView (~> 1.2.1)
+  - TransformerKit (~> 0.5.4)
+  - UIAlertView+Blocks (~> 0.9)
+
+EXTERNAL SOURCES:
+  ACKategories:
+    :git: https://github.com/AckeeCZ/ACKategories.git
+
+CHECKOUT OPTIONS:
+  ACKategories:
+    :commit: 32ed2332f3d1ce2179475b79a62d1b182a4a6ce9
+    :git: https://github.com/AckeeCZ/ACKategories.git
+
+SPEC CHECKSUMS:
+  ACKategories: 829cc669cb71fad789347a6cd684eec07e4c2638
+  AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  DZNEmptyDataSet: 0ec00bfc230d7450997b60c127afdd0b9f24f3b6
+  ECSlidingViewController: 6485c14f23b4487e9946535421ca8f111f86cc53
+  FlurrySDK: ea03fd78ffb32886e26c9b7634ff0d8cb18dcd55
+  HockeySDK: dd11a2b9da3372fd025643bee5bc10c8c613d169
+  IQKeyboardManager: ac803e61e5b50efae6b3aeedd95a02c7c7d3b2b3
+  Kiwi: f49c9d54b28917df5928fe44968a39ed198cb8a8
+  MagicalRecord: 2dc87179ae7c1f2a274442624ec65a07d4357a6f
+  Mantle: 299966b00759634931699f69cb6a30b9239b944d
+  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
+  PHFComposeBarView: 758c73ce54be681df97223bc61543dd8828ae0d3
+  PHFDelegateChain: 491f9cd8a3fb8761f390ff05f74a0e168d48d285
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  StandardPaths: d5c7fadc9ea4327e460a19052d5a18cfbffa689d
+  SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
+  SZTextView: 906df45afd3c1b24fc5252088d5ef8061513c238
+  TransformerKit: 0a235de1030a23d47c86706c0316b4a0c7105d73
+  UIAlertView+Blocks: a46c99c5144f6c5dbc7d62fd2a0678daceec89a3
+
+COCOAPODS: 0.39.0
